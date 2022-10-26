@@ -1,4 +1,5 @@
 import { Text, View, StatusBar } from 'react-native';
+import { NativeBaseProvider } from 'native-base';
 import {
 	useFonts,
 	Roboto_400Regular,
@@ -16,20 +17,13 @@ export default function App() {
 	}
 
 	return (
-		<View
-			style={{
-				backgroundColor: '#202024',
-				alignItems: 'center',
-				justifyContent: 'center',
-				flex: 1,
-			}}
-		>
+		<NativeBaseProvider>
 			<StatusBar
 				barStyle='light-content'
 				backgroundColor='transparent'
 				translucent
 			/>
 			<Text style={{ color: 'white' }}>Hello World!</Text>
-		</View>
+		</NativeBaseProvider>
 	);
 }
