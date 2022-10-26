@@ -8,6 +8,7 @@ export function SignIn() {
 		<VStack
 			flex={1}
 			bg='gray.700'
+			px={10}
 		>
 			<Image
 				source={BackgroundImg}
@@ -30,8 +31,15 @@ export function SignIn() {
 					Acesse sua conta
 				</Heading>
 
-				<Input placeholder='E-mail' />
-				<Input placeholder='Senha' />
+				<Input
+					placeholder='E-mail'
+					keyboardType='email-address'
+					autoCapitalize='none'
+				/>
+				<Input
+					placeholder='Senha'
+					secureTextEntry
+				/>
 			</Center>
 		</VStack>
 	);
