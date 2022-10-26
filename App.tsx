@@ -5,6 +5,7 @@ import {
 	Roboto_400Regular,
 	Roboto_700Bold,
 } from '@expo-google-fonts/roboto';
+import { Loading } from '@components/Loading';
 
 export default function App() {
 	const [fontsLoaded] = useFonts({
@@ -13,7 +14,7 @@ export default function App() {
 	});
 
 	if (!fontsLoaded) {
-		return null;
+		return <Loading />;
 	}
 
 	return (
@@ -23,7 +24,7 @@ export default function App() {
 				backgroundColor='transparent'
 				translucent
 			/>
-			<Text style={{ color: 'white' }}>Hello World!</Text>
+			<Loading />
 		</NativeBaseProvider>
 	);
 }
